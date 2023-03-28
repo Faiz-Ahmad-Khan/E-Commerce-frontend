@@ -9,7 +9,6 @@ import AddProduct from './components/AddProduct';
 import ProductList from './components/ProductList';
 import UpdateProduct from './components/UpdateComponent';
 import Profile from './components/Profile';
-require("dotenv").config();
 export const URL = process.env.REACT_APP_SERVER_URL;
 function App(){
   return(
