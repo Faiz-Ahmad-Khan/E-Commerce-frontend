@@ -17,7 +17,7 @@ const Profile = () => {
   }, []);
 
   const getProducts = async (userId) => {
-    let result = await fetch(`http://localhost:5000/products/user/${userId}`, {
+    let result = await fetch(`http://localhost:5000/products/users/${userId}`, {
       headers: {
         authorization: JSON.parse(localStorage.getItem('token')),
       },

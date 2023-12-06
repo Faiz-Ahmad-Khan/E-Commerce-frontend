@@ -3,6 +3,7 @@
   padding: 15px;
 }
 
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -33,6 +34,14 @@
   margin-left: 25%;
 }
 
+.profile {
+  margin-left: 35%;
+  border: 1px solid cyan;
+  width: 500px;
+  padding-left: 20px;
+  margin-top: 70px;
+
+}
 .logo{
   width: 45px;
     height: 45px;
