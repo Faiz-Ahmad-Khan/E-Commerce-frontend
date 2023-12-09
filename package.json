@@ -42,6 +42,9 @@
       "last 1 safari version"
     ]
   },
+  "rules": {
+    "react-hooks/exhaustive-deps": "warn"
+  },
   "devDependencies": {
     "dotenv-webpack": "^8.0.1"
   }
