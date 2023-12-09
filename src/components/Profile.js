@@ -14,7 +14,7 @@ const Profile = () => {
       setUser(auth);
       getProducts(auth._id);
     }
-  }, []);
+  }, [navigate]);
 
   const getProducts = async (userId) => {
     let result = await fetch(`http://localhost:5000/products/users/${userId}`, {

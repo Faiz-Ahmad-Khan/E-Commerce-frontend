@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const [name, SetName] = useState("");
     const [password, SetPassword] = useState("");
     const [email, SetEmail] = useState("");
     const navigate = useNavigate();
+
     useEffect(() => {
         const auth = localStorage.getItem('user');
         if (auth) {
-            navigate('/')
+            navigate('/');
         }
-    }, []);
+    }, [navigate]);
+
     const collectData = async () => {
         console.warn(name, email, password);
         let result = await fetch('http://localhost:5000/register', {
@@ -21,12 +23,13 @@ const SignUp = () => {
                 'Content-Type': 'application/json'
             },
         });
-        result = await result.json()
+        result = await result.json();
         console.warn(result);
         localStorage.setItem("user", JSON.stringify(result.result));
         localStorage.setItem("token", JSON.stringify(result.auth));
-        navigate('/')
-    }
+        navigate('/');
+    };
+
     return (
         <div className="register">
             <h1>Register</h1>
@@ -41,7 +44,7 @@ const SignUp = () => {
 
             <button onClick={collectData} className="appButton" type="button" >Sign Up</button>
         </div>
-    )
-}
+    );
+};
 
 export default SignUp;
