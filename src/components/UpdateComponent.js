@@ -12,7 +12,7 @@ const UpdateProduct = () => {
     useEffect(() => {
         const getProductDetails = async () => {
             console.warn(params);
-            let result = await fetch(`http://localhost:5000/product/${params.id}`, {
+            let result = await fetch(`https://e-com-backend.netlify.app/product/${params.id}`, {
                 headers: {
                     authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
                 }
@@ -29,7 +29,7 @@ const UpdateProduct = () => {
 
     const updateProduct = async () => {
         console.warn(name, price, category, company);
-        let result = await fetch(`http://localhost:5000/product/${params.id}`, {
+        let result = await fetch(`https://e-com-backend.netlify.app/product/${params.id}`, {
             method: 'put',
             body: JSON.stringify({ name, price, category, company }),
             headers: {

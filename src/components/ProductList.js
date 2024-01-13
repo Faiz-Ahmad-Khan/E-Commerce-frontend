@@ -8,7 +8,7 @@ const ProductList = () => {
     }, []);
 
     const getProducts = async () => {
-        let result = await fetch('http://localhost:5000/products',{
+        let result = await fetch('https://e-com-backend.netlify.app/products',{
             headers:{
                 authorization:JSON.parse(localStorage.getItem('token'))
             }
