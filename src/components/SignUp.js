@@ -16,7 +16,7 @@ const SignUp = () => {
 
     const collectData = async () => {
         console.warn(name, email, password);
-        let result = await fetch('https://e-com-backend.netlify.app/register', {
+        let result = await fetch('https://e-com-backend-vtri.onrender.com/register', {
             method: 'post',
             body: JSON.stringify({ name, email, password }),
             headers: {

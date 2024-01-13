@@ -14,7 +14,7 @@ const Login = () => {
     }, [navigate]);
 
     const handleLogin = async () => {
-        let result = await fetch("https://e-com-backend.netlify.app/login", {
+        let result = await fetch("https://e-com-backend-vtri.onrender.com/login", {
             method: 'post',
             body: JSON.stringify({ email, password }),
             headers: {

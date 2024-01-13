@@ -17,7 +17,7 @@ const Profile = () => {
   }, [navigate]);
 
   const getProducts = async (userId) => {
-    let result = await fetch(`https://e-com-backend.netlify.app/products/users/${userId}`, {
+    let result = await fetch(`https://e-com-backend-vtri.onrender.com/products/users/${userId}`, {
       headers: {
         authorization: JSON.parse(localStorage.getItem('token')),
       },

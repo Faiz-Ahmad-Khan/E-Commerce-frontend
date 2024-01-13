@@ -14,7 +14,7 @@ const AddProduct = () => {
             return false
         }
         const userId= JSON.parse(localStorage.getItem('user'))._id;
-        let result =await fetch("https://e-com-backend.netlify.app/add-product",{
+        let result =await fetch("https://e-com-backend-vtri.onrender.com/add-product",{
             method: "post",
             body: JSON.stringify({name,price,category,company,userId}),
             headers: {
