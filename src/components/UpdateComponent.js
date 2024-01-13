@@ -59,7 +59,7 @@ const UpdateProduct = () => {
             />
 
             <input type="text" placeholder='Enter product company' className='inputBox'
-                value={company} onChange={(e) => { setCompnay(e.target.value) }}
+                value={company} onChange={(e) => { setCompany(e.target.value) }}
             />
 
 
